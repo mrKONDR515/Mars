@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect
+
 # from forms.loginform import LoginForm
 
 app = Flask(__name__)
@@ -14,6 +15,12 @@ def index():
 @app.route('/training/<prof>')
 def training(prof):
     return render_template('training.html', prof=prof)
+
+
+@app.route('/list_prof/<type>')
+def list_prof(type):
+    prof = ["инженер-исследователь", "пилот", "строитель", "экзобиолог", "врач"]
+    return render_template('list_prof.html', type=type, prof=prof)
 
 
 if __name__ == '__main__':
