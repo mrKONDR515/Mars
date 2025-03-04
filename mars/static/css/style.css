@@ -10,3 +10,9 @@ p {
    padding-left: 50px;
    color: black
 }
+.success {
+   background-image: url("../MARS-2-7.png");
+   background-repeat: no-repeat;
+   background-position: 50px;
+   padding-left: 150pt
+}
