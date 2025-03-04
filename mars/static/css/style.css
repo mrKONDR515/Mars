@@ -1,0 +1,12 @@
+h4 {
+   padding-left: 20px;
+   color: grey
+}
+.center {
+  display: block;
+  margin: 0 auto;
+}
+p {
+   padding-left: 50px;
+   color: black
+}

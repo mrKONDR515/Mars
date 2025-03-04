@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request
 
 # from forms.loginform import LoginForm
 
@@ -21,6 +21,22 @@ def training(prof):
 def list_prof(type):
     prof = ["инженер-исследователь", "пилот", "строитель", "экзобиолог", "врач"]
     return render_template('list_prof.html', type=type, prof=prof)
+
+
+@app.route('/answer')
+@app.route("/auto_answer")
+def answer():
+    data = {
+        'title': 'Анкета',
+        'surname': 'Watny',
+        'name': 'Mark',
+        'education': 'выше среднего',
+        'profession': 'штурман марсохода',
+        'sex': 'male',
+        'motivation': 'Всегда мечтал застрять на Марсе',
+        'ready': 'True'
+    }
+    return render_template('auto_answer.html', **data)
 
 
 if __name__ == '__main__':
